@@ -1,5 +1,5 @@
 /* =========================================================
-   Kuroyuri Hub — app.js
+   Japanese Heavy Music Hub — app.js
    Vanilla ES6+. No frameworks, no build step.
    ========================================================= */
 
@@ -14,7 +14,7 @@
     // No playlist ships by default — paste a real one in the UI, or set it
     // here, e.g. defaultPlaylistId: "PLxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx".
     defaultPlaylistId: "",
-    storageKey: "kuroyuri:playlistId",
+    storageKey: "jhmh:playlistId",
   };
 
   /* ---------------------------------------------------------
