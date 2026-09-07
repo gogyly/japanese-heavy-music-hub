@@ -11,9 +11,9 @@
      Find it in a YouTube playlist URL after "list=".
      --------------------------------------------------------- */
   const RADIO_CONFIG = {
-    // No playlist ships by default — paste a real one in the UI, or set it
-    // here, e.g. defaultPlaylistId: "PLxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx".
-    defaultPlaylistId: "",
+    // Ships live for every visitor. Swap it for your own playlist ID any
+    // time — find it in a YouTube playlist URL after "list=".
+    defaultPlaylistId: "PLpNv62wdODrAQOpHwE9o8xks_Bs9XE0MX",
     storageKey: "jhmh:playlistId",
   };
 
