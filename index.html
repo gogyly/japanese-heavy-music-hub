@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kuroyuri Hub — Japanese Female-Fronted Heavy Music</title>
+<meta name="description" content="A dark gothic hub for Japanese female-fronted metal and rock — news, radio, and curated links for bands like BAND-MAID, LOVEBITES, NEMOPHILA, Hanabie., Unlucky Morpheus and BABYMETAL.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%98%A6%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Noto+Serif+JP:wght@500;700&family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<div class="parallax-bg" id="parallaxBg" aria-hidden="true">
+  <div class="parallax-layer layer-base"></div>
+  <div class="parallax-layer layer-pattern"></div>
+  <div class="parallax-layer layer-vignette"></div>
+</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="#main">
+      <span class="brand-kanji">黒百合</span>
+      <span class="brand-text">Kuroyuri&nbsp;Hub</span>
+    </a>
+    <nav class="main-nav" aria-label="Primary">
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navList">
+        <span></span><span></span><span></span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+      <ul class="nav-list" id="navList">
+        <li><a href="#news" class="ornate-link">News</a></li>
+        <li><a href="#radio" class="ornate-link">Radio</a></li>
+        <li><a href="#links" class="ornate-link">Directory</a></li>
+        <li><a href="#about" class="ornate-link">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-frame ornate-frame">
+      <h1 id="hero-title">
+        <span class="hero-line hero-line-en">Japanese Female-Fronted</span>
+        <span class="hero-line hero-line-accent">Heavy Music Hub</span>
+      </h1>
+      <p class="hero-sub">News, radio, and a curated map of the scene — BAND-MAID, LOVEBITES, NEMOPHILA, Hanabie., Unlucky Morpheus, BABYMETAL, DenKare, Yousei Teikoku &amp; beyond.</p>
+      <div class="hero-cta">
+        <a href="#news" class="btn btn-ornate btn-primary">Latest News</a>
+        <a href="#radio" class="btn btn-ornate">Tune In</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="news" class="section news-section" aria-labelledby="news-title">
+    <div class="section-inner">
+      <h2 id="news-title" class="section-title"><span class="title-kanji">報</span>News from the Scene</h2>
+      <p class="section-sub">Live-pulled from Japanese rock &amp; metal news feeds. Falls back to a curated snapshot if a feed is unreachable.</p>
+
+      <div class="news-controls">
+        <div class="news-status" id="newsStatus" role="status" aria-live="polite">Loading news…</div>
+        <button class="btn btn-ornate btn-small" id="refreshNews" type="button">↻ Refresh</button>
+      </div>
+
+      <div class="news-grid" id="newsGrid" aria-live="polite">
+        <!-- news cards injected by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <section id="radio" class="section radio-section" aria-labelledby="radio-title">
+    <div class="section-inner">
+      <h2 id="radio-title" class="section-title"><span class="title-kanji">音</span>Radio &amp; Playlists</h2>
+      <p class="section-sub">An embedded stream of Japanese female-fronted metal. Swap the playlist any time — see <code>app.js → RADIO_CONFIG</code>.</p>
+
+      <div class="radio-frame ornate-frame">
+        <div class="radio-embed" id="radioEmbed">
+          <iframe
+            id="radioIframe"
+            title="Kuroyuri Hub radio playlist"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy"
+            hidden>
+          </iframe>
+          <div class="radio-placeholder" id="radioPlaceholder">
+            <p>No playlist loaded yet.</p>
+            <p class="radio-placeholder-hint">Paste a YouTube playlist ID below to start streaming.</p>
+          </div>
+        </div>
+
+        <form class="playlist-form" id="playlistForm">
+          <label for="playlistInput">Custom YouTube playlist ID</label>
+          <div class="playlist-input-row">
+            <input type="text" id="playlistInput" name="playlistInput"
+                   placeholder="e.g. PLxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+                   autocomplete="off" spellcheck="false">
+            <button type="submit" class="btn btn-ornate btn-small">Load</button>
+          </div>
+          <p class="field-hint">Find the ID in a YouTube playlist URL after <code>list=</code>. Saved locally in your browser.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section id="links" class="section links-section" aria-labelledby="links-title">
+    <div class="section-inner">
+      <h2 id="links-title" class="section-title"><span class="title-kanji">網</span>Curated Directory</h2>
+      <p class="section-sub">Fan hubs, news outlets, and official portals worth bookmarking.</p>
+
+      <div class="links-grid" id="linksGrid">
+        <!-- link buttons injected by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section about-section" aria-labelledby="about-title">
+    <div class="section-inner about-inner ornate-frame">
+      <h2 id="about-title" class="section-title"><span class="title-kanji">誓</span>About This Hub</h2>
+      <p>Kuroyuri Hub is a fan-built portal dedicated to the Japanese female-fronted heavy music scene — from BAND-MAID's disciplined groove to LOVEBITES' NWOBHM fire, NEMOPHILA's technical shred, Hanabie.'s kawaii-core chaos, Unlucky Morpheus's symphonic power, BABYMETAL's genre-defining fusion, DenKare's gothic-metal theatrics, and Yousei Teikoku's symphonic darkness.</p>
+      <p>Built with plain HTML, CSS and JavaScript — no frameworks — so it stays fast and easy to host on GitHub Pages.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p class="footer-kanji">黒百合</p>
+    <p>&copy; <span id="year"></span> Kuroyuri Hub — Fan project. Not affiliated with any listed artist or label.</p>
+    <p class="footer-sub">All band names and marks belong to their respective owners.</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
